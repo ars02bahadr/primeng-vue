@@ -184,10 +184,10 @@ src/
 ├── router/         # Vue Router yapılandırması
 ├── service/        # API servisleri
 ├── shared/         # Paylaşılan bileşenler ve servisler
-│   ├── store/      # Vuex store modülleri
 │   ├── AuthService.js    # Kimlik doğrulama servisi
 │   ├── HttpService.js    # Axios HTTP istemcisi
 │   └── ErrorService.js   # Hata yönetimi servisi
+├── store/      # Vuex store modülleri
 └── views/          # Sayfa bileşenleri
 ```
 

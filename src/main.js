@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
-import store from './shared/store'; // Ensure this is the correct path
+import store from './store'; // Ensure this is the correct path
 
 import '@/assets/styles.scss';
 import Aura from '@primeuix/themes/aura';

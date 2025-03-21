@@ -1,6 +1,6 @@
 import AppLayout from '@/layout/AppLayout.vue';
 import { createRouter, createWebHistory } from 'vue-router';
-import store from '../shared/store';
+import store from '../store';
 
 const router = createRouter({
     history: createWebHistory(),

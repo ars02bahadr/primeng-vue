@@ -1,10 +1,10 @@
 import { jwtDecode } from 'jwt-decode';
 import { createStore } from 'vuex';
 import createPersistedState from 'vuex-persistedstate';
-import UserModel from '../../model/UserModel';
-import router from '../../router';
-import authService from '../AuthService';
-import httpService from '../HttpService';
+import UserModel from '../model/UserModel';
+import router from '../router';
+import authService from '../shared/AuthService';
+import httpService from '../shared/HttpService';
 
 const store = createStore({
     state: {
