@@ -1,8 +1,38 @@
-<script setup>
+<script>
 import { useLayout } from '@/layout/composables/layout';
+import { useStore } from 'vuex';
 import AppConfigurator from './AppConfigurator.vue';
 
-const { toggleMenu, toggleDarkMode, isDarkTheme } = useLayout();
+export default {
+    name: 'AppTopbar',
+    emits: ['menubutton-click', 'topbarmenubutton-click', 'search-click'],
+    methods: {
+        onMenuButtonClick(event) {
+            this.$emit('menubutton-click', event);
+        },
+        onTopbarMenuButtonClick(event) {
+            this.$emit('topbarmenubutton-click', event);
+        },
+        onSearchClick() {
+            this.$emit('search-click');
+        }
+    },
+    setup() {
+        const store = useStore();
+        const { toggleMenu, toggleDarkMode, isDarkTheme } = useLayout();
+
+        const handleLogout = () => {
+            store.dispatch('logout');
+        };
+
+        return {
+            toggleMenu,
+            toggleDarkMode,
+            isDarkTheme,
+            handleLogout
+        };
+    }
+};
 </script>
 
 <template>
@@ -60,17 +90,9 @@ const { toggleMenu, toggleDarkMode, isDarkTheme } = useLayout();
 
             <div class="layout-topbar-menu hidden lg:block">
                 <div class="layout-topbar-menu-content">
-                    <button type="button" class="layout-topbar-action">
-                        <i class="pi pi-calendar"></i>
-                        <span>Calendar</span>
-                    </button>
-                    <button type="button" class="layout-topbar-action">
-                        <i class="pi pi-inbox"></i>
-                        <span>Messages</span>
-                    </button>
-                    <button type="button" class="layout-topbar-action">
-                        <i class="pi pi-user"></i>
-                        <span>Profile</span>
+                    <button type="button" class="layout-topbar-action" @click="handleLogout">
+                        <i class="pi pi-sign-out"></i>
+                        <span>Çıkış Yap</span>
                     </button>
                 </div>
             </div>
