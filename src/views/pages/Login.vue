@@ -39,7 +39,7 @@ const handleLogin = async () => {
             <div style="border-radius: 56px; padding: 0.3rem; background: linear-gradient(180deg, var(--primary-color) 10%, rgba(33, 150, 243, 0) 30%)">
                 <div class="w-full bg-surface-0 dark:bg-surface-900 py-20 px-8 sm:px-20" style="border-radius: 53px">
                     <div class="text-center mb-8">
-                        <h2 class="text-900 text-3xl font-medium mb-3">Hoş Geldiniz</h2>
+                        <h2 class="text-900 text-3xl font-medium mb-3">Vue</h2>
                         <span class="text-600 font-medium">Giriş yapmak için bilgilerinizi giriniz</span>
                     </div>
 
